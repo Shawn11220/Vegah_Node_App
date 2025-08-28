@@ -17,6 +17,10 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
   .then(() => console.log("✅ MongoDB connected"))
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
+// Simple landing route
+app.get("/", (req, res) => {
+  res.send("Welcome to the Task Manager API, use /tasks to manage your tasks.");
+});
 
 // Create task
 app.post("/tasks", async (req, res) => {
