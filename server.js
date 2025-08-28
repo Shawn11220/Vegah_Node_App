@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopol
 
 // Simple landing route
 app.get("/", (req, res) => {
-  res.send("Welcome to the Task Manager API, use /tasks to manage your tasks.");
+  res.send("Welcome to the Task Manager API, use /tasks to manage your tasks. \n This is now updated for a actions push");
 });
 
 // Create task
